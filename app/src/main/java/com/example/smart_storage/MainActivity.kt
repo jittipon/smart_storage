@@ -11,6 +11,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        //สวัสดีทุกคน
+
         regisbutton.setOnClickListener(){
             var i = Intent(this@MainActivity,com.example.smart_storage.register::class.java);
             startActivity(i);
