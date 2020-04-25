@@ -23,6 +23,7 @@
         app:layout_constraintVertical_bias="0.27" />
     //kuykuy
     //kgkg
+    //123456
     <EditText
         android:id="@+id/getpass"
         android:layout_width="wrap_content"
