@@ -14,6 +14,8 @@ class MainActivity : AppCompatActivity() {
         //สวัสดีทุกคน
         //สวัสดีจ่ะ
 
+        //12345
+
         regisbutton.setOnClickListener(){
             var i = Intent(this@MainActivity,com.example.smart_storage.register::class.java);
             startActivity(i);
