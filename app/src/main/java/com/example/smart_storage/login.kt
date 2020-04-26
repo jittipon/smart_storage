@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_login.*
 
+
 class login : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -12,11 +13,17 @@ class login : AppCompatActivity() {
         setContentView(R.layout.activity_login)
 
         backbutton.setOnClickListener {
-            var i = Intent(this@login, MainActivity::class.java)
-            //var i = Intent(this@MainActivity,com.example.smart_storage.register::class.java);
+            val i = Intent(this@login, MainActivity::class.java)
             startActivity(i)
-
-
         }
-    }
-}
+
+
+        signup.setOnClickListener {
+            val intent = Intent(this@login,register::class.java)
+            startActivity(intent)
+        }
+
+
+            }
+        }
+

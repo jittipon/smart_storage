@@ -17,11 +17,11 @@ class MainActivity : AppCompatActivity() {
         //12345
 
         regisbutton.setOnClickListener(){
-            var i = Intent(this@MainActivity,com.example.smart_storage.register::class.java);
+            val i = Intent(this@MainActivity,com.example.smart_storage.register::class.java);
             startActivity(i);
         }
         loginbutton.setOnClickListener(){
-            var i = Intent(this@MainActivity,com.example.smart_storage.login::class.java);
+            val i = Intent(this@MainActivity,com.example.smart_storage.login::class.java);
             startActivity(i);
         }
     }
