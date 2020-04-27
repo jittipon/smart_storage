@@ -4,29 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/information"
-    tools:context=".info">
+    android:background="@drawable/order"
+    tools:context=".order">
 
     <TextView
         android:id="@+id/btnback"
-        android:layout_width="46dp"
-        android:layout_height="42dp"
+        android:layout_width="43dp"
+        android:layout_height="36dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.016"
+        app:layout_constraintHorizontal_bias="0.013"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.023" />
 
     <TextView
-        android:id="@+id/orderBtn"
-        android:layout_width="386dp"
-        android:layout_height="73dp"
+        android:id="@+id/sendorder"
+        android:layout_width="392dp"
+        android:layout_height="75dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintHorizontal_bias="0.473"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.922" />
-
+        app:layout_constraintVertical_bias="0.923" />
 </androidx.constraintlayout.widget.ConstraintLayout>
