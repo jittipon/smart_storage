@@ -11,10 +11,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //สวัสดีทุกคน
-        //สวัสดีจ่ะ
-        //asdasdasd
-        //12345
 
         regisbutton.setOnClickListener(){
             val i = Intent(this@MainActivity,com.example.smart_storage.register::class.java);

@@ -24,10 +24,6 @@
         android:id="@+id/inputPass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-<<<<<<< Updated upstream
-=======
-        android:layout_marginTop="96dp"
->>>>>>> Stashed changes
         android:ems="10"
         android:hint="Pass"
         android:inputType="textPersonName"
