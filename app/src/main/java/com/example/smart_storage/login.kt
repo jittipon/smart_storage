@@ -23,6 +23,12 @@ class login : AppCompatActivity() {
             startActivity(intent)
         }
 
+        loginBtn.setOnClickListener {
+            val intent = Intent(this@login,storage::class.java)
+            startActivity(intent)
+
+        }
+
 
             }
         }
