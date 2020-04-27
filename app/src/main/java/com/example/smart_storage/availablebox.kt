@@ -7,11 +7,16 @@ import kotlinx.android.synthetic.main.activity_availablebox.*
 
 class availablebox : AppCompatActivity() {
 
+    override fun onBackPressed() {
+        val i = Intent(this@availablebox, storage::class.java)
+        startActivity(i)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_availablebox)
 
-        backBtn.setOnClickListener {
+        btnback.setOnClickListener {
             val intent = Intent(this@availablebox,storage::class.java)
             startActivity(intent)
         }

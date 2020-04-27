@@ -8,6 +8,11 @@ import kotlinx.android.synthetic.main.activity_register.*
 
 class register : AppCompatActivity() {
 
+    override fun onBackPressed() {
+        val i = Intent(this@register, MainActivity::class.java)
+        startActivity(i)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
