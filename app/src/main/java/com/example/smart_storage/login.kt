@@ -19,6 +19,7 @@ class login : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
+
         val user1 = "admin"
         val pass1 = "123456"
 

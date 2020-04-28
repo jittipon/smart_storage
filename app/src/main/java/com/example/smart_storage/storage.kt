@@ -41,7 +41,7 @@ class storage : AppCompatActivity() {
             startActivity(intent)
         }
         box2.setOnClickListener {
-            val intent = Intent(this@storage,availablebox::class.java)
+            val intent = Intent(this@storage,availablebox2a::class.java)
             startActivity(intent)
         }
 

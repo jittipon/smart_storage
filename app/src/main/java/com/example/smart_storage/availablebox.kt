@@ -20,7 +20,8 @@ class availablebox : AppCompatActivity() {
             val intent = Intent(this@availablebox,storage::class.java)
             startActivity(intent)
         }
-        submitBtn.setOnClickListener {
+
+        submitBtn1a.setOnClickListener {
             val intent = Intent(this@availablebox,info::class.java)
             startActivity(intent)
         }
