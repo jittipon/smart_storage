@@ -7,6 +7,7 @@ import kotlinx.android.synthetic.main.activity_login.*
 
 
 class login : AppCompatActivity() {
+    //hello
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
