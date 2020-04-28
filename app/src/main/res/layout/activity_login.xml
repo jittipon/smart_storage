@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/loginpage"
     tools:context=".login">
+    //123456
 
     <EditText
         android:id="@+id/getuser"
