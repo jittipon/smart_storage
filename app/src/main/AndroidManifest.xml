@@ -9,15 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-<<<<<<< HEAD
-        <activity android:name=".complete"></activity>
-        <activity android:name=".order" />
-=======
+<!--<<<<<<< HEAD-->
+<!--        //><activity android:name=".complete"></activity>-->
+<!--        //<activity android:name=".order" />-->
+<!--=======-->
         <activity android:name=".info"></activity>
         <activity android:name=".availablebox"></activity>
         <activity android:name=".storage" />
 >>>>>>> master
-        <activity android:name=".TEST" />
+<!--        <activity android:name=".TEST" />-->
         <activity android:name=".register" />
         <activity android:name=".login" />
         <activity android:name=".MainActivity">
