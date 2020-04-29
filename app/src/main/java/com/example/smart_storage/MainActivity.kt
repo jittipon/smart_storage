@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.os.Handler
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlin.system.exitProcess
 
 class MainActivity : AppCompatActivity() {
 
@@ -36,11 +35,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
-        regisbutton.setOnClickListener(){
+        signupBtn.setOnClickListener(){
             val i = Intent(this@MainActivity,com.example.smart_storage.register::class.java);
             startActivity(i);
         }
-        loginbutton.setOnClickListener(){
+        loginBtn.setOnClickListener(){
             val i = Intent(this@MainActivity,com.example.smart_storage.login::class.java);
             startActivity(i);
         }

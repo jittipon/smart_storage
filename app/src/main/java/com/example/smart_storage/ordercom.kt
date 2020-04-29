@@ -22,6 +22,11 @@ class ordercom : AppCompatActivity() {
             startActivity(intent)
         }
 
+        gotostorage.setOnClickListener {
+            val intent = Intent(this@ordercom,storage::class.java)
+            startActivity(intent)
+        }
+
 
 
 
