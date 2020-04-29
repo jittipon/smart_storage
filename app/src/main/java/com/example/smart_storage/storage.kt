@@ -5,10 +5,16 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
 import android.widget.Toast
-import kotlinx.android.synthetic.main.activity_register.*
+import com.example.anto.Anto
+import com.example.anto.ResponseAnto
+import com.example.anto.ValueEventListener
 import kotlinx.android.synthetic.main.activity_storage.*
 
 class storage : AppCompatActivity() {
+
+    val reference = Anto.getInstance().getReference("fQ5cOLsk3e0AioI5o91oOTfAeCHmY81itFZvXrDI","LockerProject")
+    val check = reference.addChannel("storage")
+    val check2 = reference.addChannel("storage2")
 
     lateinit var showuser: TextView
     var backcount = 0
@@ -23,9 +29,7 @@ class storage : AppCompatActivity() {
             startActivity(i)
             backcount = 0
         }
-
     }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_storage)
@@ -34,6 +38,47 @@ class storage : AppCompatActivity() {
 
         val username = intent.getStringExtra("user")
         showuser.text = username
+
+        check.addValueEventListener(object :ValueEventListener{
+            override fun onDataChange(responseAnto: ResponseAnto) {
+                var status = responseAnto.value
+                if (status == "1")
+                {
+                    box1bar.setImageResource(R.drawable.red)
+
+                }
+                else
+                {
+                    box1bar.setImageResource(R.drawable.green)
+
+                }
+            }
+
+            override fun onCancelled(dataBaseError: String) {
+            }
+
+        })
+
+        check2.addValueEventListener(object :ValueEventListener{
+            override fun onDataChange(responseAnto: ResponseAnto) {
+                var status = responseAnto.value
+                if (status == "1")
+                {
+                    box2bar.setImageResource(R.drawable.red)
+
+                }
+                else
+                {
+                    box2bar.setImageResource(R.drawable.green)
+
+                }
+            }
+
+            override fun onCancelled(dataBaseError: String) {
+
+            }
+
+        })
 
 
         box1.setOnClickListener {
@@ -44,8 +89,6 @@ class storage : AppCompatActivity() {
             val intent = Intent(this@storage,availablebox2a::class.java)
             startActivity(intent)
         }
-
-
 
     }
 }
