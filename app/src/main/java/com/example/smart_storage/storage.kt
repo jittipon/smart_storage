@@ -8,9 +8,14 @@ import android.widget.Toast
 import com.example.anto.Anto
 import com.example.anto.ResponseAnto
 import com.example.anto.ValueEventListener
+import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_storage.*
 
 class storage : AppCompatActivity() {
+
+    var mAuth : FirebaseAuth? = null
+    var mAuthListener : FirebaseAuth.AuthStateListener? = null
+    private  val TAG : String = "Result Activity"
 
     val reference = Anto.getInstance().getReference("fQ5cOLsk3e0AioI5o91oOTfAeCHmY81itFZvXrDI","LockerProject")
     val check = reference.addChannel("storage")
@@ -24,6 +29,7 @@ class storage : AppCompatActivity() {
         Toast.makeText(applicationContext,"press again to logout", Toast.LENGTH_SHORT).show()
         if (backcount>1)
         {
+            mAuth!!.signOut()
             Toast.makeText(applicationContext,"log out success", Toast.LENGTH_SHORT).show()
             val i = Intent(this@storage, MainActivity::class.java)
             startActivity(i)
@@ -34,10 +40,22 @@ class storage : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_storage)
 
-        showuser = findViewById(R.id.username)
+        //val user = mAuth!!.currentUser
 
-        val username = intent.getStringExtra("user")
-        showuser.text = username
+        //username.text = user!!.email
+
+        //showuser = findViewById(R.id.username)
+
+        //val username = intent.getStringExtra("user")
+        //showuser.text = username
+
+        mAuthListener = FirebaseAuth.AuthStateListener {  firebaseAuth ->
+            val users = firebaseAuth.currentUser
+            if(users == null){
+                startActivity(Intent(this@storage,MainActivity::class.java))
+                finish()
+            }
+        }
 
         check.addValueEventListener(object :ValueEventListener{
             override fun onDataChange(responseAnto: ResponseAnto) {
@@ -91,4 +109,16 @@ class storage : AppCompatActivity() {
         }
 
     }
+
+//    override fun onStart(){
+//        super.onStart()
+//        mAuth!!.addAuthStateListener { mAuthListener }
+//    }
+//
+//    override fun onStop() {
+//        super.onStop()
+//        if (mAuthListener != null) {mAuth!!.removeAuthStateListener { mAuthListener }}
+//    }
+
+
 }
