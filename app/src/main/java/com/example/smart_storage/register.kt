@@ -20,11 +20,19 @@ class register : AppCompatActivity() {
         back.setOnClickListener {
             val intent = Intent(this@register,MainActivity::class.java)
             startActivity(intent)
+
         }
 
         gotologin.setOnClickListener {
             val  intent = Intent(this@register,login::class.java)
             startActivity(intent)
+
+        }
+
+        signupBtn.setOnClickListener {
+            val intent = Intent(this@register,login::class.java)
+            startActivity(intent)
+
         }
 
 

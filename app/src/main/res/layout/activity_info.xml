@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/information1"
+    android:background="@drawable/newinfo1"
     tools:context=".info">
 
     <TextView
@@ -20,8 +20,8 @@
 
     <TextView
         android:id="@+id/orderBtn"
-        android:layout_width="386dp"
-        android:layout_height="73dp"
+        android:layout_width="409dp"
+        android:layout_height="75dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.48"
@@ -52,7 +52,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.382"
-        app:sv_unitTextSize="1dp"
-        app:sv_speedTextPosition="BOTTOM_CENTER"/>
+        app:sv_speedTextPosition="BOTTOM_CENTER"
+        app:sv_unitTextSize="1dp" />
+
+    <TextView
+        android:id="@+id/showinstock"
+        android:layout_width="96dp"
+        android:layout_height="37dp"
+        android:text="instock"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.701"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.778" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
