@@ -4,7 +4,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import android.util.Log
 import android.widget.Toast
+import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -28,12 +30,22 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    var mAuth : FirebaseAuth? = null
+    private val TAG: String = "Main Activity"
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        mAuth = FirebaseAuth.getInstance()
+
+//        if(mAuth!!.currentUser != null){
+//            Log.d(TAG,"Continue with: "+ mAuth!!.currentUser!!.email)
+//            val i = Intent(this@MainActivity,com.example.smart_storage.register::class.java);
+//            startActivity(i);
+//        }
 
         signupBtn.setOnClickListener(){
             val i = Intent(this@MainActivity,com.example.smart_storage.register::class.java);

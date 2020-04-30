@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "712799130485",
+    "firebase_url": "https://smartstorage-6e0cf.firebaseio.com",
+    "project_id": "smartstorage-6e0cf",
+    "storage_bucket": "smartstorage-6e0cf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:712799130485:android:c5064dbf3be7227da1393c",
+        "android_client_info": {
+          "package_name": "com.example.smart_storage"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "712799130485-hbjt49jgs9khs955opsb134m8tb0rp9v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.smart_storage",
+            "certificate_hash": "b4af5fb033bd8de3ee64a3a1511fd9e02cb13729"
+          }
+        },
+        {
+          "client_id": "712799130485-i02lp2qlpcn90o653bl9k06c2vdej51g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.smart_storage",
+            "certificate_hash": "8fe0cf857cbedd7d0505644835e66ab1e5627388"
+          }
+        },
+        {
+          "client_id": "712799130485-sjpt3k7bbn0rc27421m2s7ph62ll7brl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDgLnop9t3pkzqeHlIB-iTUylyYspOmYEo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "712799130485-sjpt3k7bbn0rc27421m2s7ph62ll7brl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
