@@ -3,6 +3,7 @@ package com.example.smart_storage
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.TextView
 import kotlinx.android.synthetic.main.activity_order.*
 
 class order : AppCompatActivity() {
@@ -15,6 +16,12 @@ class order : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_order)
+
+        val name2 = intent.getStringExtra("name")
+        name.text = name2
+
+
+
 
         btnback.setOnClickListener {
             val intent = Intent(this@order,info::class.java)

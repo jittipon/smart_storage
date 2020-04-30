@@ -8,6 +8,48 @@
     tools:context=".info2a">
 
     <TextView
+        android:id="@+id/name2A"
+        android:layout_width="144dp"
+        android:layout_height="35dp"
+        android:fontFamily="@font/poppins"
+        android:text="name2A"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.853"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.602" />
+
+    <TextView
+        android:id="@+id/showinstock2A"
+        android:layout_width="96dp"
+        android:layout_height="37dp"
+        android:fontFamily="@font/poppins"
+        android:text="instock"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.723"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.766" />
+
+    <TextView
+        android:id="@+id/categoty2A"
+        android:layout_width="147dp"
+        android:layout_height="37dp"
+        android:fontFamily="@font/poppins"
+        android:text="category"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.863"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.677" />
+
+    <TextView
         android:id="@+id/orderBtn2a"
         android:layout_width="412dp"
         android:layout_height="74dp"
@@ -54,4 +96,5 @@
         app:layout_constraintVertical_bias="0.382"
         app:sv_speedTextPosition="BOTTOM_CENTER"
         app:sv_unitTextSize="1dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

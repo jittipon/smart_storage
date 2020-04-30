@@ -15,7 +15,7 @@ class info : AppCompatActivity() {
     val check = reference.addChannel("storage")
     val temp = reference.addChannel("temp1")
     val humid = reference.addChannel("Humid1")
-
+    val name = reference.addChannel("productname1")
 
 //MON
 //    val reference = Anto.getInstance().getReference("K3yltBNveN4QGwtE8I5XngNDTwxZM9hTWswzyshK","test")
@@ -39,6 +39,23 @@ class info : AppCompatActivity() {
 
         pointerSpeedometer.withTremble = false
         pointerSpeedometer2.withTremble = false
+
+        var name1 :String
+
+        name.addValueEventListener(object :ValueEventListener{
+            override fun onCancelled(dataBaseError: String) {
+                TODO("Not yet implemented")
+            }
+
+            override fun onDataChange(responseAnto: ResponseAnto) {
+                name1 = responseAnto.value
+                name1A.text = name1
+
+
+            }
+
+
+        })
 
         var amount:Int
 
@@ -95,7 +112,15 @@ class info : AppCompatActivity() {
         }
 
         orderBtn.setOnClickListener {
+            val name = name1A.text.toString()
+
             val intent = Intent(this@info,order::class.java)
+
+            intent.putExtra("name",name)
+
+
+
+
             startActivity(intent)
 
         }

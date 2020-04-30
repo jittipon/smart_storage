@@ -18,6 +18,7 @@ class info2a : AppCompatActivity() {
     val reference = Anto.getInstance().getReference("fQ5cOLsk3e0AioI5o91oOTfAeCHmY81itFZvXrDI","LockerProject")
     val temp = reference.addChannel("temp2")
     val humid = reference.addChannel("Humid2")
+    val name = reference.addChannel("productname2")
 
 
     override fun onBackPressed() {
@@ -31,6 +32,19 @@ class info2a : AppCompatActivity() {
 
         pointerSpeedometer.withTremble = false
         pointerSpeedometer2.withTremble = false
+
+        var name2 :String
+
+        name.addValueEventListener(object :ValueEventListener{
+            override fun onCancelled(dataBaseError: String) {
+                TODO("Not yet implemented")
+            }
+
+            override fun onDataChange(responseAnto: ResponseAnto) {
+                name2 = responseAnto.value
+                name2A.text = name2
+            }
+        })
 
         var tempf : Float
 
@@ -47,7 +61,6 @@ class info2a : AppCompatActivity() {
 
                 //showtemp.text = "Error inPut from ANto"
             }
-
 
 
         })
@@ -77,14 +90,22 @@ class info2a : AppCompatActivity() {
         }
 
         orderBtn2a.setOnClickListener {
+            val name = name2A.text.toString()
+
             val intent = Intent(this@info2a,order::class.java)
+
+
+
+            intent.putExtra("name",name)
+
+
+
+
+
+
             startActivity(intent)
 
         }
-
-
-
-
 
 
     }
