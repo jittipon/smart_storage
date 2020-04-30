@@ -10,11 +10,10 @@ import kotlinx.android.synthetic.main.activity_info.*
 
 class info : AppCompatActivity() {
 
-//T
-    val reference = Anto.getInstance().getReference("fQ5cOLsk3e0AioI5o91oOTfAeCHmY81itFZvXrDI","LockerProject")
-    val check = reference.addChannel("storage")
-    val temp = reference.addChannel("temp1")
-    val humid = reference.addChannel("Humid1")
+
+    val reference = Anto.getInstance().getReference("K3yltBNveN4QGwtE8I5XngNDTwxZM9hTWswzyshK","test")
+    val temp = reference.addChannel("temp")
+    val humid = reference.addChannel("humid")
 
 
 //MON
