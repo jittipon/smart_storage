@@ -6,15 +6,17 @@ import android.os.Bundle
 import com.example.anto.Anto
 import com.example.anto.ResponseAnto
 import com.example.anto.ValueEventListener
+import com.github.anastr.speedviewlib.components.indicators.Indicator
 import kotlinx.android.synthetic.main.activity_info.*
 
 class info : AppCompatActivity() {
 
-
-    val reference = Anto.getInstance().getReference("K3yltBNveN4QGwtE8I5XngNDTwxZM9hTWswzyshK","test")
-    val temp = reference.addChannel("temp")
-    val humid = reference.addChannel("humid")
-
+//T
+    val reference = Anto.getInstance().getReference("fQ5cOLsk3e0AioI5o91oOTfAeCHmY81itFZvXrDI","LockerProject")
+    val check = reference.addChannel("storage")
+    val temp = reference.addChannel("temp1")
+    val humid = reference.addChannel("Humid1")
+    val name = reference.addChannel("productname1")
 
 //MON
 //    val reference = Anto.getInstance().getReference("K3yltBNveN4QGwtE8I5XngNDTwxZM9hTWswzyshK","test")
@@ -38,6 +40,24 @@ class info : AppCompatActivity() {
 
         pointerSpeedometer.withTremble = false
         pointerSpeedometer2.withTremble = false
+        pointerSpeedometer.setIndicator(Indicator.Indicators.NeedleIndicator)
+        pointerSpeedometer2.setIndicator(Indicator.Indicators.NeedleIndicator)
+        var name1 :String
+
+        name.addValueEventListener(object :ValueEventListener{
+            override fun onCancelled(dataBaseError: String) {
+                TODO("Not yet implemented")
+            }
+
+            override fun onDataChange(responseAnto: ResponseAnto) {
+                name1 = responseAnto.value
+                name1A.text = name1
+
+
+            }
+
+
+        })
 
         var amount:Int
 
@@ -94,7 +114,15 @@ class info : AppCompatActivity() {
         }
 
         orderBtn.setOnClickListener {
+            val name = name1A.text.toString()
+
             val intent = Intent(this@info,order::class.java)
+
+            intent.putExtra("name",name)
+
+
+
+
             startActivity(intent)
 
         }

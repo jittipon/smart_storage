@@ -8,7 +8,7 @@
     tools:context=".availablebox">
 
     <EditText
-        android:id="@+id/width1a"
+        android:id="@+id/length1a"
         android:layout_width="50dp"
         android:layout_height="30dp"
         android:background="#FFFFFF"
@@ -48,14 +48,14 @@
         app:layout_constraintVertical_bias="0.334" />
 
     <RadioGroup
-        android:layout_width="104dp"
-        android:layout_height="133dp"
+        android:layout_width="103dp"
+        android:layout_height="122dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.889"
+        app:layout_constraintHorizontal_bias="0.863"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.787">
+        app:layout_constraintVertical_bias="0.784">
 
         <RadioButton
             android:id="@+id/radioButton7"
@@ -72,14 +72,14 @@
 
     <RadioGroup
         android:id="@+id/radioGroup"
-        android:layout_width="116dp"
-        android:layout_height="133dp"
+        android:layout_width="113dp"
+        android:layout_height="128dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.532"
+        app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.787">
+        app:layout_constraintVertical_bias="0.792">
 
         <RadioButton
             android:id="@+id/radioButton"
