@@ -6,6 +6,7 @@ import android.os.Bundle
 import com.example.anto.Anto
 import com.example.anto.ResponseAnto
 import com.example.anto.ValueEventListener
+import com.github.anastr.speedviewlib.components.indicators.Indicator
 import kotlinx.android.synthetic.main.activity_availablebox2a.*
 import kotlinx.android.synthetic.main.activity_info.*
 import kotlinx.android.synthetic.main.activity_info2a.*
@@ -32,6 +33,8 @@ class info2a : AppCompatActivity() {
 
         pointerSpeedometer.withTremble = false
         pointerSpeedometer2.withTremble = false
+        pointerSpeedometer.setIndicator(Indicator.Indicators.NeedleIndicator)
+        pointerSpeedometer2.setIndicator(Indicator.Indicators.NeedleIndicator)
 
         var name2 :String
 
