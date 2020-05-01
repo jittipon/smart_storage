@@ -3,10 +3,12 @@ package com.example.smart_storage
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import com.example.anto.Anto
 import com.example.anto.ResponseAnto
 import com.example.anto.ValueEventListener
 import kotlinx.android.synthetic.main.activity_availablebox.*
+import kotlinx.android.synthetic.main.activity_availablebox2a.*
 
 class availablebox : AppCompatActivity() {
 
@@ -32,6 +34,24 @@ class availablebox : AppCompatActivity() {
 
 
         submitBtn1a.setOnClickListener {
+
+            if(name.toString().isEmpty()){
+                productname1a.error = "Please enter product name!"
+                return@setOnClickListener
+            }
+            if(amount.toString().isEmpty()){
+                amount1a.error = "Please enter amount!"
+                return@setOnClickListener
+            }
+            if(high.toString().isEmpty()){
+                high1a.error = "Please enter height of product!"
+                return@setOnClickListener
+            }
+            if(length.toString().isEmpty()){
+                length1a.error = "Please enter lenght of product!"
+                return@setOnClickListener
+            }
+
             val intent = Intent(this@availablebox,info::class.java)
             namepro1.setValue(name.toString())
             amount1.setValue(amount.toString())

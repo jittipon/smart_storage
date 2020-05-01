@@ -31,6 +31,12 @@ class order : AppCompatActivity() {
 
 
         sendorder.setOnClickListener {
+
+            if(ordernum.text.toString().isEmpty()){
+                ordernum.error = "Please enter your order count"
+                return@setOnClickListener
+            }
+
             val intent = Intent(this@order,ordercom::class.java)
             startActivity(intent)
 

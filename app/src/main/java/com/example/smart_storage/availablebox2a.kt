@@ -29,6 +29,24 @@ class availablebox2a : AppCompatActivity() {
         val length = length2a.text
 
         submitBtn2a.setOnClickListener {
+
+            if(name.toString().isEmpty()){
+                productname2a.error = "Please enter product name!"
+                return@setOnClickListener
+            }
+            if(amount.toString().isEmpty()){
+                amount2a.error = "Please enter amount!"
+                return@setOnClickListener
+            }
+            if(high.toString().isEmpty()){
+                high2a.error = "Please enter height of product!"
+                return@setOnClickListener
+            }
+            if(length.toString().isEmpty()){
+                length2a.error = "Please enter lenght of product!"
+                return@setOnClickListener
+            }
+
             val intent = Intent(this@availablebox2a,info2a::class.java)
 
             namepro2.setValue(name.toString())
