@@ -12,6 +12,8 @@ import kotlinx.android.synthetic.main.activity_availablebox2a.*
 
 class availablebox : AppCompatActivity() {
 
+    //kuys
+
     val reference = Anto.getInstance().getReference("fQ5cOLsk3e0AioI5o91oOTfAeCHmY81itFZvXrDI","LockerProject")
     val namepro1 = reference.addChannel("productname1")
     val amount1 = reference.addChannel("amount1")
